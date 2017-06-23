@@ -112,6 +112,10 @@ public class TerrainLoader implements Scene {
         if (keys.isDown(GLFW_KEY_S)) {
             angleX -= angleX < Math.toRadians(-30) ? 0 : Math.toRadians(180) * secs;
         }
+
+        if(keys.isDown(GLFW_KEY_L)){
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        }
     }
 
 @Override
